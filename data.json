@@ -1,0 +1,10 @@
+{
+    "Name of course (as listed) on Canvas": {
+        "section_id": 12345678,
+        "project_id": 1234567890
+    },
+    "Name of another course (as listed) on Canvas": {
+        "section_id": 12345678,
+        "project_id": 1234567890
+    }
+}
