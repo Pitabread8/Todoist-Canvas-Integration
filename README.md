@@ -7,9 +7,9 @@ This script adds all (new) Canvas assignments due in the next five days to Todoi
 
 2. My Todoist is set up so that courses are grouped up into different projects and each one has its own section. In [data.json](data.json), for each course, fill out the Canvas course name (as it was set by the instructor) and the respective project and section IDs.
 
-3. You'll need to use the cron command-line utility for adding tasks automatically. The following code will run the script every hour (as long as the computer is on). Make sure to replace the `{DIRECTORY}` placeholder with your computer's directory.
+3. You'll need to use the cron command-line utility to add tasks automatically. The following code will run the script every hour (as long as the computer is on). Make sure to replace the `{DIRECTORY}` placeholder with your computer's directory. In addition, the code will create an `output.txt` file that logs the number of tasks added and the date.
     ```bash
     0 * * * * cd {DIRECTORY} && /usr/local/bin/python3 main.py >>{DIRECTORY}/output.txt
     ```
 
-    In order to avoid duplicating tasks, the tasks are listed in the currently empty list in [tasks.json](tasks.json). It'll automatically update.
+    In order to avoid duplicating tasks, the tasks are listed in the currently empty list in [tasks.json](tasks.json). It'll automatically update. 
