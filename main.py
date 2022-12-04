@@ -9,7 +9,7 @@ def getFriday():
     return friday
 
 # canvas
-canvas_key = "Bearer TOKEN"
+canvas_key = "Bearer {TOKEN}"
 
 # retrieves courses
 courses = requests.get(
@@ -31,7 +31,7 @@ for i in courses:
     ).json())
 
 # todoist
-todoist_key = "Bearer TOKEN"
+todoist_key = "Bearer {TOKEN}"
 
 # returns todoist projects
 todoist = requests.get(
