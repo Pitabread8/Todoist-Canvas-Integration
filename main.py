@@ -35,7 +35,7 @@ todoist_key = "Bearer {TOKEN}"
 
 # returns todoist projects
 todoist = requests.get(
-    "https://api.todoist.com/rest/v1/projects", 
+    "https://api.todoist.com/rest/v2/projects", 
     headers = {
         "Authorization": todoist_key
     }
@@ -58,7 +58,7 @@ for i in tasks:
             if j["title"] not in names:
                 counter += 1
                 requests.post(
-                            "https://api.todoist.com/rest/v1/tasks",
+                            "https://api.todoist.com/rest/v2/tasks",
                             data=json.dumps({
                                 "project_id": data[i]["project_id"],
                                 "section_id": data[i]["section_id"],
